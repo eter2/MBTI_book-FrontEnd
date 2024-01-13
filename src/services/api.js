@@ -1,4 +1,4 @@
-const url = 'http://ec2-43-202-12-112.ap-northeast-2.compute.amazonaws.com:8080';
+const url = 'https://honey-test.com';
 
 exports.getOneQuestion = async (questionId) => {
   try {
