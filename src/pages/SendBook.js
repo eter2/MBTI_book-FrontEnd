@@ -29,6 +29,13 @@ const Description = styled.div`
     color: #6f6f70;
     margin-top: 70px;
     margin-bottom: 50px;
+  
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      letter-spacing: -0.41px;
+      line-height: 22px;
+      margin-top: 40px;
+    }
 `;
 
 const SubDescription = styled.div`
@@ -42,6 +49,12 @@ const SubDescription = styled.div`
     text-align: right;
     color: #9b9b9b;
     margin-bottom: 20px;
+  
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      letter-spacing: -0.41px;
+      line-height: 15px;
+    }
 `;
 
 const InputContainer = styled.div`
@@ -67,6 +80,13 @@ const Input = styled.input`
     &:focus {
        outline: none;
     }
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      letter-spacing: -0.41px;
+      line-height: 15px;
+      min-height: 50px;
+    }
 `;
 
 const CustomButton = styled.button`
@@ -80,6 +100,13 @@ const CustomButton = styled.button`
     margin-top: -95px;
     margin-right: 5px;
     cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+        width: 28px;
+        height: 30px;
+        margin-top: -60px;
+        margin-right: 2px;
+    }
 `;
 
 const ButtonContainer = styled.div`
@@ -105,6 +132,7 @@ const Button = styled.button`
     margin-bottom: 10px;
     cursor: pointer;
 `;
+
 const SubmitButton = styled.button`
     font-family: 'Noto Sans KR';
     width: 100%;
@@ -120,6 +148,11 @@ const SubmitButton = styled.button`
     margin-top: 10px;
     margin-bottom: 10px;
     cursor: pointer;
+  
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        max-width: 200px;
+    }
 `;
 
 const SearchContainer = styled.div`
@@ -147,6 +180,10 @@ const SearchResultContainer = styled.div`
     width: 100%;
     max-width: 817px;
     margin: 20px;
+  
+    @media screen and (max-width: 768px) {
+        font-size: 24px;
+    }
 `;
 
 const SelectEmptyContainer = styled.div`
@@ -161,6 +198,24 @@ const Separator = styled.hr`
     width: 100%;
     max-width: 817px;
     border: solid 1px rgba(205, 196, 196, 1);
+`;
+
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  color: white;
+  font-size: 40px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+`;
+
+const StyledMagnifyingIcon = styled(FontAwesomeIcon)`
+    color: #326a4f;
+    font-size: 40px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 30px;
+    }
 `;
 
 function SendBook() {
@@ -250,13 +305,17 @@ function SendBook() {
             <InputContainer>
                 <Input placeholder='입력해주세요' value={keyword} onChange={(e) => setKeyword(e.target.value)}/>
                 <ButtonContainer>
-                    <CustomButton onClick={handleSearch}><FontAwesomeIcon icon={faArrowUp}  style={{ color: 'white', fontSize: '40px' }}/></CustomButton>
+                    <CustomButton onClick={handleSearch}>
+                    <StyledFontAwesomeIcon icon={faArrowUp} />
+                    </CustomButton>
                 </ButtonContainer>
             </InputContainer>
 
             <InputContainer>
                 <SearchContainer>
-                    {bookList !== undefined && bookList.length !== 0 &&<SearchResultContainer><FontAwesomeIcon icon={faMagnifyingGlass}  style={{ color: '#326a4f', fontSize: '40px' }}/> {keyword}  검색 결과</SearchResultContainer>
+                    {bookList !== undefined && bookList.length !== 0 &&<SearchResultContainer>
+                        <StyledMagnifyingIcon icon={faMagnifyingGlass} />
+                        {keyword}  검색 결과</SearchResultContainer>
                     }
                     {bookList !== undefined && bookList.length !== 0 && bookList.items.map((book, index) => (
                         <SearchBook key={index} book={book} handleSelect={handleSelect}></SearchBook>

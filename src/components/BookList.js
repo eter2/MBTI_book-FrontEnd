@@ -8,6 +8,10 @@ const ContainerWithColumn = styled.div`
     margin-top: 20px;
     margin-bottom: 180px;
     justify-content: space-between;
+  
+    @media screen and (max-width: 768px) {
+        margin-bottom: 50px;
+    }
 `;
 
 const Title = styled.div`
@@ -17,6 +21,10 @@ const Title = styled.div`
     text-align: left;
     letter-spacing: 2px;
     color: #326a4f;
+  
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
 `;
 
 const Description = styled.div`
@@ -26,8 +34,11 @@ const Description = styled.div`
     font-size: 32px;
     letter-spacing: -0.24px;
     text-align: left;
-    // margin-left: 80px;
     color: #7d7d7d;
+  
+    @media screen and (max-width: 768px) {
+      font-size: 13px;
+    }
 `;
 
 const Imgbox = styled.img`
@@ -36,6 +47,12 @@ const Imgbox = styled.img`
     height: 100%;
     width: 100%;
     margin-left: 50px;
+  
+    @media screen and (max-width: 768px) {
+        max-width: 130px;
+        min-height: 100px;
+        margin-left: 10px;
+    }
 `
 
 function BookList({index, book}) {

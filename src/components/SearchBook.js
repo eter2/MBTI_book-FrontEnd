@@ -24,6 +24,10 @@ const Title = styled.div`
     text-align: left;
     text-align: left;
     color: #326a4f;
+  
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
 `;
 
 const Description = styled.div`
@@ -34,6 +38,10 @@ const Description = styled.div`
     text-align: left;
     text-align: left;
     color: #326a4f;
+  
+    @media screen and (max-width: 768px) {
+        font-size: 17px;
+    }
 `;
 
 const Imgbox = styled.img`
@@ -45,6 +53,10 @@ const Imgbox = styled.img`
     margin-left: 10px;
     margin-right: 20px;
     margin-bottom: 9px;
+  
+    @media screen and (max-width: 768px) {
+        margin-right: 6px;
+    }
 `
 
 function SelectBook({book, handleSelect}) {

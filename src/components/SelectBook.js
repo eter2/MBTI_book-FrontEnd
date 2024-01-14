@@ -18,8 +18,11 @@ const Title = styled.div`
     font-weight: 700;
     font-size: 24px;
     text-align: left;
-    text-align: left;
     color: #326a4f;
+  
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
 `;
 
 const DescriptionContainer = styled.div`
@@ -34,6 +37,10 @@ const Description = styled.div`
     text-align: left;
     text-align: left;
     color: #326a4f;
+  
+    @media screen and (max-width: 768px) {
+        font-size: 17px;
+    }
 `;
 
 const Imgbox = styled.img`
@@ -42,6 +49,10 @@ const Imgbox = styled.img`
     height: 100%;
     width: 100%;
     margin-right: 25px;
+  
+    @media screen and (max-width: 768px) {
+        margin-right: 10px;
+    }
 `
 
 const DeleteBox = styled.div`
@@ -51,6 +62,14 @@ const DeleteBox = styled.div`
     cursor: pointer;
     z-index: 1;
 `
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  color: #326a4f;
+  font-size: 40px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+  }
+`;
 
 function SelectBook({index, book, handleDelete}) {
     return (
@@ -61,7 +80,7 @@ function SelectBook({index, book, handleDelete}) {
                 <Description>저자 {book.author}</Description>
                 <Description>출판 {book.publisher}</Description>
             </DescriptionContainer>
-            <DeleteBox onClick={() => handleDelete(index)}><FontAwesomeIcon icon={faXmark}  style={{ color: '#326a4f', fontSize: '40px' }}/></DeleteBox>
+            <DeleteBox onClick={() => handleDelete(index)}><StyledFontAwesomeIcon icon={faXmark}/></DeleteBox>
         </ContainerWithColumn>
     );
 }

@@ -6,6 +6,10 @@ const Container = styled.div`
     justify-content: space-between;
     max-width: 450px;
     width: 100%;
+  
+    @media screen and (max-width: 768px) {
+        max-width: 300px;
+    }
 `;
 
 const StyledCheckbox = styled.span`
@@ -19,7 +23,17 @@ const StyledCheckbox = styled.span`
     display: flex;
     justify-content: center;
     align-items: center;
+  
+    @media screen and (max-width: 768px) {
+        width: 28px;
+        height: 30px;
+    }
 `;
+const Imgbox = styled.img`
+  @media screen and (max-width: 768px) {
+    width: 15px;
+  }
+`
 
 const CheckboxGroup = ({ count }) => {
     return (
@@ -29,7 +43,7 @@ const CheckboxGroup = ({ count }) => {
                     key={index}
                     checked={index === count? true: false}
                 >
-                    <img src='./img/check.png'></img>
+                    <Imgbox src='./img/check.png' />
                 </StyledCheckbox>
             ))}
         </Container>

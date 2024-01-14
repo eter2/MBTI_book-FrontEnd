@@ -19,6 +19,12 @@ const Title = styled.div`
   text-align: center;
   letter-spacing: 2px;
   color: #254e3a;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
+    letter-spacing: 0.41px;
+    line-height: 48px;
+  }
 `;
 
 const Subtitle = styled.div`
@@ -29,11 +35,21 @@ const Subtitle = styled.div`
   letter-spacing: 0.41px;
   color: #000000;
   margin-top: 20px;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    letter-spacing: 0.41px;
+    line-height: 48px;
+  }
 `;
 
 const Imgbox = styled.img`
   margin-top: 20px;
   margin-bottom: 100px;
+  
+  @media screen and (max-width: 768px) {
+    width: 180px;
+  }
 `
 
 const Description = styled.div`
@@ -45,6 +61,13 @@ const Description = styled.div`
   text-align: center;
   color: #6f6f70;
   margin-top: 20px;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    letter-spacing: -0.41px;
+    line-height: 22px;
+    margin-top: 0px;
+  }
 `;
 
 const Button = styled.button`
@@ -58,6 +81,12 @@ const Button = styled.button`
   color: white;
   font-size: 26px;
   cursor: pointer;
+  
+  @media screen and (max-width: 768px) {
+    max-width: 244px;
+    min-height: 50px;
+    font-size: 15px;
+  }
 `;
 
 function Home() {

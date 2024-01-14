@@ -22,6 +22,12 @@ const Title = styled.div`
     letter-spacing: 3px;
     color: #326a4f;
     margin-top: 150px;
+  
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+      letter-spacing: 0.35px;
+      line-height: 28px;
+    }
 `;
 
 const Description = styled.div`
@@ -34,6 +40,14 @@ const Description = styled.div`
     color: #6f6f70;
     margin-top: 70px;
     margin-bottom: 200px;
+  
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      letter-spacing: -0.41px;
+      line-height: 22px;
+      margin-top: 40px;
+      margin-bottom: 150px;
+    }
 `;
 
 function Question() {

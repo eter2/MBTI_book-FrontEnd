@@ -20,7 +20,7 @@ const ContainerWithFlex = styled.div`
     width: 500px;
     
     @media screen and (max-width: 768px) {
-        width: 300px;
+        width: 200px;
     }
 `;
 
@@ -31,7 +31,20 @@ const Description = styled.div`
     font-size: 43px;
     margin-top: 50px;
     text-align: center;
+    
+    @media screen and (max-width: 768px) {
+        font-size: 24px;
+        margin-top: 20px;
+    }
 `;  
+
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+font-size: 82px;
+
+@media screen and (max-width: 768px) {
+  font-size: 60px;
+}
+`;
 
 function Share({url}) {
     const navigate = useNavigate();
@@ -54,12 +67,12 @@ function Share({url}) {
         <div>
             <ContainerWithColumn>
                 <ContainerWithFlex onClick={handleHome}>
-                    <FontAwesomeIcon icon={faHouse} style={{ fontSize: '82px' }}/>
+                    <StyledFontAwesomeIcon icon={faHouse}/>
                     <Description>다시하기</Description>
                 </ContainerWithFlex>
                 
                 <ContainerWithFlex onClick={() => saveClipboard(url)}>
-                    <FontAwesomeIcon icon={faShareNodes} style={{ fontSize: '82px' }}/>
+                    <StyledFontAwesomeIcon icon={faShareNodes}/>
                     <Description>내 책갈피 공유하기</Description>
                 </ContainerWithFlex>
             </ContainerWithColumn>

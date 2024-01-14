@@ -14,6 +14,10 @@ const Column = styled.div`
     background-color: #84c3a5;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     margin-right: 10px;
+    
+    @media screen and (max-width: 768px) {
+        height: 832px;
+    }
 `;
 
 const TitleContainer = styled.div`
@@ -27,6 +31,11 @@ const TitleContainer = styled.div`
     max-width: 786px;
     height: 800px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    
+    @media screen and (max-width: 768px) {
+        height: 550px;
+        padding: 20px;
+    }
 `;
 
 const Title = styled.div`
@@ -35,12 +44,21 @@ const Title = styled.div`
     text-align: center;
     letter-spacing: 2px;
     color: #326a4f;
+    
+    @media screen and (max-width: 768px) {
+        font-size: 25px;
+        letter-spacing: 0.41px;
+    }
 `;
 
 const Imgbox = styled.img`
     max-height: 400px;
     margin: 100px;
     transform: rotate(45deg);
+    
+    @media screen and (max-width: 768px) {
+        max-height: 200px;
+    }
 `
 const DescriptionContainer = styled.div`
     display: flex;
@@ -51,6 +69,11 @@ const DescriptionContainer = styled.div`
     max-width: 786px;
     height: 553px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+        height: 200px;
+    }
 `;
 
 const Description = styled.div`
@@ -62,6 +85,10 @@ const Description = styled.div`
     text-align: left;
     color: #000000;
     margin-bottom: 200px;
+    
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
 `;
 
 function ResultBook({name, imgUrl, description}) {

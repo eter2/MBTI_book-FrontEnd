@@ -27,6 +27,14 @@ const Subtitle = styled.div`
     color: #326a4f;
     margin-top: 100px;
     margin-bottom: 80px;
+  
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      letter-spacing: 0.41px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      line-height: 26.06px;
+    }
 `;
 
 function Result() {

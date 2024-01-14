@@ -9,6 +9,10 @@ const Container = styled.div`
     width: 100%;
     margin-bottom: 30px;
     cursor: pointer;
+  
+    @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+    }
 `;
 
 const StyledSpan = styled.span`
@@ -23,6 +27,11 @@ const StyledSpan = styled.span`
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  
+    @media screen and (max-width: 768px) {
+        width: 340;
+        height: 67px;
+    }
 `;
 
 const Description = styled.div`
@@ -34,6 +43,10 @@ const Description = styled.div`
   text-align: center;
   color: #6f6f70;
   white-space:pre-wrap;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const Button = ({ num, count, setCount, content }) => {
